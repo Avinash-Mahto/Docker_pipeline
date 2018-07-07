@@ -9,7 +9,8 @@ pipeline {
           image 'hello-world'
         }
       }
-   
+
       }
+    }
     }
     }
