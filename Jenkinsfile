@@ -5,4 +5,6 @@ pipeline {
         docker {
           image 'centos7'
         }
+      }
+}
       
