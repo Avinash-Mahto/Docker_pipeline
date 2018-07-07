@@ -9,9 +9,7 @@ pipeline {
           image 'hello-world'
         }
       }
-      steps {
-        sh 'ls'
+   
       }
     }
     }
-}
