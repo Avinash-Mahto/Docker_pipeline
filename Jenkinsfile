@@ -6,7 +6,7 @@ pipeline {
     stage('Maven Install') {
       agent {
         docker {
-          image 'centos'
+          image 'hello-world'
         }
       }
       steps {
