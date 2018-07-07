@@ -1,18 +1,12 @@
-#!groovy
-
 pipeline {
-  agent none
-  stages {
-    stage('Maven Install') {
-      agent {
-        docker {
-          image 'hello-world'
-        }
-      }
-      steps {
-        sh 'mvn clean install'
-      }
+    agent {
+        docker { image 'node:7-alpine' }
     }
-   
-      }
-    }   
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
