@@ -1,8 +1,8 @@
 # use a node base image
-FROM ubuntu
+FROM centos
 
 # set maintainer
 LABEL maintainer "avinashkumarmahto51@gmail.com"
 
 # Please install mysql package
-RUN apt update
+RUN yum install httpd
