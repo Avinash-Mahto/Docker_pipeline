@@ -2,6 +2,8 @@ pipeline {
     agent {
         docker {
             stages {
+                stage { Checkout }
+                  checkout scm
                 stage { Build }
                 steps {
                     sh 'cat /etc/os-release'
