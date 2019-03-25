@@ -1,6 +1,4 @@
-pipeline {
-    agent {
-        docker {
+node('docker') {
             stages {
                 stage ('Clone The Repository') {
                     checkout scm
@@ -12,6 +10,3 @@ pipeline {
                 }
             }
         }
-    }
-}
-    
