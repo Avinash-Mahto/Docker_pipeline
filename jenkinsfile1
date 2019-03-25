@@ -1,0 +1,12 @@
+pipeline {
+    agent {
+        docker {
+            stages {
+                stage { Build }
+                steps {
+                    sh 'cat /etc/os-release'
+                }
+            }
+        }
+    }
+}
