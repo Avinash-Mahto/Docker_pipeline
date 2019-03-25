@@ -3,10 +3,10 @@ pipeline {
         docker {
             stages {
                 stage { Checkout }
-                  checkout scm
+                   checkout scm
                 stage { Build }
                 steps {
-                    sh 'cat /etc/os-release'
+                    sh 'docker build -t avinash1988:blast1 -f Dockerfile'
                 }
             }
         }
