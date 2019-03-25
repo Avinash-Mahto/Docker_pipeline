@@ -1,5 +1,7 @@
-node() {
-            stages {
+pipeline {
+       agent none 
+                 
+              stages {
                 stage ('Clone The Repository') {
                     checkout scm
                     stage ('Build the Docker Image') {
@@ -10,3 +12,4 @@ node() {
                 }
             }
         }
+        
