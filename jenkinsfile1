@@ -2,13 +2,16 @@ pipeline {
     agent {
         docker {
             stages {
-                stage { Checkout }
-                   checkout scm
-                stage { Build }
-                steps {
-                    sh 'docker build -t avinash1988:blast1 -f Dockerfile'
+                stage ('Clone The Repository') {
+                    checkout scm
+                    stage ('Build the Docker Image') {
+                        steps {
+                            sh "docker build -t avinash1988:newimage -f Dockerfile"
+                        }
+                    }
                 }
             }
         }
     }
 }
+    
