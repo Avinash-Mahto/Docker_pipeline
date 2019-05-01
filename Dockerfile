@@ -2,7 +2,7 @@
 FROM centos
 
 # set maintainer
-LABEL maintainer "avinashkumarmahto51@gmail.com"
+LABEL maintainer "avinashmhto@gmail.com"
 
 # Please install mysql package
 RUN yum install -y httpd
